@@ -123,8 +123,8 @@ function repeatString(value, count) {
  *   'I like legends', 'end' => 'I like legs',
  *   'ABABAB','BA' => 'ABAB'
  */
-function removeFirstOccurrences(/* str, value */) {
-  throw new Error('Not implemented');
+function removeFirstOccurrences(str, value) {
+  return str.replace(value, '');
 }
 
 /**
@@ -138,8 +138,9 @@ function removeFirstOccurrences(/* str, value */) {
  *   '<span>' => 'span'
  *   '<a>' => 'a'
  */
-function unbracketTag(/* str */) {
-  throw new Error('Not implemented');
+function unbracketTag(str) {
+  const newstr = str.replace('<', '');
+  return newstr.replace('>', '');
 }
 
 /**
@@ -152,8 +153,8 @@ function unbracketTag(/* str */) {
  *   'Thunderstruck' => 'THUNDERSTRUCK'
  *  'abcdefghijklmnopqrstuvwxyz' => 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
  */
-function convertToUpperCase(/* str */) {
-  throw new Error('Not implemented');
+function convertToUpperCase(str) {
+  return str.toUpperCase();
 }
 
 /**
@@ -171,8 +172,8 @@ function convertToUpperCase(/* str */) {
  *   ],
  *   'info@gmail.com' => ['info@gmail.com']
  */
-function extractEmails(/* str */) {
-  throw new Error('Not implemented');
+function extractEmails(str) {
+  return str.split(';');
 }
 
 /**
@@ -235,8 +236,8 @@ function encodeToRot13(/* str */) {
  *   isString('test') => true
  *   isString(new String('test')) => true
  */
-function isString(/* value */) {
-  throw new Error('Not implemented');
+function isString(value) {
+  return typeof value === 'string' || value instanceof String;
 }
 
 /**
@@ -263,8 +264,60 @@ function isString(/* value */) {
  *   'Q♠' => 50
  *   'K♠' => 51
  */
-function getCardId(/* value */) {
-  throw new Error('Not implemented');
+function getCardId(value) {
+  if (value === 'A♣') return 0;
+  if (value === '2♣') return 1;
+  if (value === '3♣') return 2;
+  if (value === '4♣') return 3;
+  if (value === '5♣') return 4;
+  if (value === '6♣') return 5;
+  if (value === '7♣') return 6;
+  if (value === '8♣') return 7;
+  if (value === '9♣') return 8;
+  if (value === '10♣') return 9;
+  if (value === 'J♣') return 10;
+  if (value === 'Q♣') return 11;
+  if (value === 'K♣') return 12;
+  if (value === 'A♦') return 13;
+  if (value === '2♦') return 14;
+  if (value === '3♦') return 15;
+  if (value === '4♦') return 16;
+  if (value === '5♦') return 17;
+  if (value === '6♦') return 18;
+  if (value === '7♦') return 19;
+  if (value === '8♦') return 20;
+  if (value === '9♦') return 21;
+  if (value === '10♦') return 22;
+  if (value === 'J♦') return 23;
+  if (value === 'Q♦') return 24;
+  if (value === 'K♦') return 25;
+  if (value === 'A♥') return 26;
+  if (value === '2♥') return 27;
+  if (value === '3♥') return 28;
+  if (value === '4♥') return 29;
+  if (value === '5♥') return 30;
+  if (value === '6♥') return 31;
+  if (value === '7♥') return 32;
+  if (value === '8♥') return 33;
+  if (value === '9♥') return 34;
+  if (value === '10♥') return 35;
+  if (value === 'J♥') return 36;
+  if (value === 'Q♥') return 37;
+  if (value === 'K♥') return 38;
+  if (value === 'A♠') return 39;
+  if (value === '2♠') return 40;
+  if (value === '3♠') return 41;
+  if (value === '4♠') return 42;
+  if (value === '5♠') return 43;
+  if (value === '6♠') return 44;
+  if (value === '7♠') return 45;
+  if (value === '8♠') return 46;
+  if (value === '9♠') return 47;
+  if (value === '10♠') return 48;
+  if (value === 'J♠') return 49;
+  if (value === 'Q♠') return 50;
+  if (value === 'K♠') return 51;
+  return -1;
 }
 
 module.exports = {
